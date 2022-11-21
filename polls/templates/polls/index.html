@@ -1,0 +1,13 @@
+{% extends "polls/base.html" %}
+{% block content %}
+    <h1>Đây là template</h1>
+    <p>Chào các bạn mình là {{name}}</p>
+    <h2>Thông tin của tôi:</h2>
+    <ul>
+        {%for item in infor %}
+                <li>{{item}}</li>   
+        {% endfor %}    
+    </ul>
+    <h3>Link Bình Chọn</h3>
+    <a href="{% url 'view_list' %}"><p>{{vote}}</p>
+{% endblock %}
